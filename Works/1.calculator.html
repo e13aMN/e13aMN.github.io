@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    body{
+        background-color: gray;
+    }
+    table{
+        margin: 0 41%;
+        width: 300px;
+        height: 400px;
+        font-size: 42px;
+    }
+    .Calculator{
+        text-align: center;
+        font-size: 50px;
+    }
+    button{
+        font-size: 38px
+    }
+    .acbut{
+        width: 250px;
+        height: 80px;
+    }
+    .acbut1{
+        width: 50px;
+        height: 80px;
+    }
+    .acbut2{
+        width: 80px;
+        height: 80px;
+    }
+    .acbut3{
+        width: 165px;
+        height: 80px;
+    }
+</style>
+<body>
+    <div class="Calculator">
+        <p>USD:2853₮ RUB:38₮</p>
+       <table border="1" cellspacing="0">
+           <tr>
+               <td colspan="4" id="inputLabel">0</td>
+           </tr>
+           <tr>
+               <td colspan="3"><button class="acbut" onclick="pushBtn(this);">AC</button></td>
+               <td><button class="acbut1" onclick="pushBtn(this);">/</button></td>
+           </tr>
+           <tr>
+               <td><button class="acbut2" onclick="pushBtn(this);">7</button></td>
+               <td><button class="acbut2" onclick="pushBtn(this);">8</button></td>
+               <td><button class="acbut2" onclick="pushBtn(this);">9</button></td>
+               <td><button class="acbut1" onclick="pushBtn(this);">*</button></td>
+           </tr>
+           <tr>
+               <td><button class="acbut2" onclick="pushBtn(this);">4</button></td>
+               <td><button class="acbut2" onclick="pushBtn(this);">5</button></td>
+               <td><button class="acbut2" onclick="pushBtn(this);">6</button></td>
+               <td><button class="acbut1" onclick="pushBtn(this);">-</button></td>
+           </tr>
+           <tr>
+               <td><button class="acbut2" onclick="pushBtn(this);">1</button></td>
+               <td><button class="acbut2" onclick="pushBtn(this);">2</button></td>
+               <td><button class="acbut2" onclick="pushBtn(this);">3</button></td>
+               <td><button class="acbut1" onclick="pushBtn(this);">+</button></td>
+           </tr>
+           <tr>
+               <td colspan="2"><button class="acbut3" onclick="pushBtn(this);">0</button></td>
+               <td><button class="acbut2" onclick="pushBtn(this);">.</button></td>
+               <td><button class="acbut1" onclick="pushBtn(this);">=</button></td>
+           </tr>
+       </table>
+       </div>
+       <script>
+           function pushBtn(obj) {
+          
+          var pushed = obj.innerHTML;
+           
+          if (pushed == '=') {
+              
+              inputLabel.innerHTML = eval(inputLabel.innerHTML);
+               
+          } else if (pushed == 'AC') {
+              
+              inputLabel.innerHTML = '0';
+               
+          } else {
+              if (inputLabel.innerHTML == '0') {
+                  inputLabel.innerHTML = pushed;
+                   
+              } else {
+                  inputLabel.innerHTML += pushed;   
+              }
+          }
+      }
+       </script>
+</body>
+</html>
