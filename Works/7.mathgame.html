@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math_Game</title>
+    <style>
+        body{
+            background-color: gray;
+            text-align: center;
+        }
+        .tomdiv{
+            width: 800px;
+            height: 600px;
+            margin-left: 400px;
+            margin-top: 100px;
+        }
+        .div2{
+            width: 600px;
+            height: 300px;
+            background-color:burlywood;
+            display: flex;
+            justify-content: space-around;
+        }
+        .div3{
+            width: 100px;
+            height: 100px;
+            border-style: solid;
+            border-color: black;
+            border-width: 8px;
+            margin-top: 100px;
+            text-align: center;
+            font-size: 40px;
+            border-radius: 15px;
+        }
+        .div4{
+            text-align: center;
+            margin-top: 110px;
+        }
+        .div5{
+            width: 100px;
+            height: 100px;
+            border-style: solid;
+            border-color: black;
+            border-width: 8px;
+            margin-top: 100px;
+            text-align: center;
+            font-size: 40px;
+            border-radius: 15px;
+        }
+        .div6{
+            text-align: center;
+            margin-top: 110px;
+        }
+        .div5-1{
+            width: 60px;
+            height: 60px;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+        input{
+            height: 100px;
+            width: 100px;
+            margin-top: 100px;
+            font-size: 40px;
+            background-color: burlywood;
+            border-width: 8px;
+            border-radius: 15px;
+        }
+        .btn{
+            height: 100px;
+            width: 100px;
+            margin-top: 100px;
+            border-width: 8px;
+            border-radius: 15px;
+        }
+        .btn1{
+            height: 100px;
+            width: 100px;
+            margin-top: 110px;
+        }
+        input{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tomdiv">
+        <div class="div2">
+            <div class="div3" id="div3">
+                <div class="div5-1" id="d3">0</div>
+            </div>
+            <div class="div4">
+                <h1>+</h1>
+            </div>
+            <div class="div5" id="div5">
+                <div class="div5-1" id="d5">0</div>
+            </div>
+            <div class="div6">
+                <h1>=</h1>
+            </div>
+            <input id="id">
+            <button class="btn" onclick="calc()">CHECK</button>
+        </div>
+    </div>
+    <script>
+        let count = 1;
+        let too1 = ["1","3","4","2","5","6","9","8","7","10"];
+        let too2 = ["1","3","4","2","5","6","9","8","7","10"];
+        let randomToo1 = too1[Math.floor(Math.random()*too1.length)];
+        let randomToo2 = too2[Math.floor(Math.random()*too2.length)];
+        let getDiv3 = document.querySelector("#d3");
+        let getDiv5 = document.querySelector("#d5");
+        let getInput = document.getElementById("id");
+        getDiv3.innerText = randomToo1
+        getDiv5.innerText = randomToo2
+        let inputValue = document.getElementById("id").value
+        function calc(){
+            if (count==1) {
+                let inputValue = document.getElementById("id").value
+                if(Number(randomToo1) + Number(randomToo2) == inputValue){
+                    alert("Зөв хариулт!")
+                }
+                 else{
+                    alert("Буруу хариулт!")
+                 }
+                 getInput.value = ""
+                 getDiv3.innerText =  too1[Math.floor(Math.random()*too1.length)]
+                 getDiv5.innerText =  too2[Math.floor(Math.random()*too1.length)]
+            }
+            else{
+                if(Number(too1[Math.floor(Math.random()*too1.length)]) + Number(too2[Math.floor(Math.random()*too1.length)]) == inputValue){
+                    alert("Зөв хариулт!")
+                }
+                 else{
+                    alert("Буруу хариулт!")
+                 }
+                 getInput.value = ""
+                 getDiv3.innerText =  too1[Math.floor(Math.random()*too1.length)]
+                 getDiv5.innerText =  too2[Math.floor(Math.random()*too1.length)]
+            } 
+            count++
+        }
+    </script>
+</body>

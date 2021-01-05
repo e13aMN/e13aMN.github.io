@@ -1,27 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Хайртай шүү чамдаа </title>
-    <style>
-        body{
-            background-color: gray;
-        }
-        .mylove{
-            text-align: center;
-            font-size: 150px;
-        }
-        img{
-            height: 700px;
-            width: 700px;
-            margin: 10px 30%;
-            
-        }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-color: grey;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
 </head>
 <body>
-    <div class="mylove">I Love You Suvdaa <3</div>
-    <img src="https://openclipart.org/image/2400px/svg_to_png/241342/Shiny-Red-Heart.png">
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="Works/1.rock.html">1.Rock paper scissors</a>
+  <a href="Works/2.tictactoe.html">2.tic tac toe</a>
+  <a href="Works/3.random.html">3.Random sentence generator</a>
+  <a href="Works/4.countdown.html">4.countdown timer</a>
+  <a href="Works/5.carousalSlider.html">5.carousel slider</a>
+  <a href="Works/6.stopmatch.html">6.stopmatch</a>
+  <a href="Works/7.mathgame.html">7.Math game</a>
+  <a href="Works/8.modal.html">8.Modal pop up</a>
+  <a href="Works/9.Todo.html">9.Todo</a>
+  <a href="Works/10.colorchanger.html">10.Backround color changer</a>
+  <a href="Works/11.gifsearch.html">11.Gifsearch</a>
+  <a href="Works/12.calculator.html">12.Calculator</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Projects</span>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "300px";
+    }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+   
 </body>
-</html>
+</html> 

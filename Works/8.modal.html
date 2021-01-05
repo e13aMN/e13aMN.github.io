@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Popup</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: gray;
+        }
+        #myBtn{
+            margin: 50px;
+        }
+        .d1{
+            width: 800px;
+            height: 800px;
+            background-color: black;
+            display: none;
+        }
+        .d2{
+            width: 400px;
+            height: 250px;
+            margin-left: 200px;
+            padding-top: 50px;
+        }
+        .d3{
+            width: 400px;
+            height: 100px;
+            background-color: grey;
+        }
+        .d3 h2{
+            text-align: center;
+            padding-top: 30px;
+        }
+        .d4{
+            width: 400px;
+            height: 100px;
+            background-color: white;
+        }
+        .d4 h4{
+            text-align: center;
+            font-size: 20px;
+            padding-top: 30px;
+        }
+        .d5{
+            width: 400px;
+            height: 50px;
+            background-color: grey;
+            display: flex;
+        }
+        .d5 .d6 .b1 {
+            background-color: #666;
+            border-radius: 10px;
+            color: white;
+            height: 40px;
+        }
+        .d5 .d6 .b2{
+            background-color: red;
+            border-radius: 7px;
+            color: white;
+            height: 40px;
+        }
+        .d6{
+            padding-top: 5px;
+            height: 70px;
+            width: 400px;
+            padding-left: 250px;
+        }
+    </style>
+</head>
+<body>
+    <button id="myBtn" onclick="change()">DELETE</button>
+    <div class="d1" id="d1">
+        <div class="d2">
+            <div class="d3">
+                <h2>Are you sure you want to delete?</h2>
+            </div>
+            <div class="d4">
+                <h4>This action cannot be undone</h4>
+            </div>
+            <div class="d5">
+                <div class="d6">
+                    <button class="b1" onclick="change1()">CANCEL</button>
+                    <button class="b2" onclick="change2()">DELETE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var bacDiv =  document.getElementById("d1");
+        var btn = document.getElementById("myBtn");
+        function change(){
+           bacDiv.style.display = "block"
+           btn.style.display = "none"
+        }
+        function change1(){
+            bacDiv.style.display = "none"
+            btn.style.display = "block"
+        }
+        function change2(){
+            bacDiv.style.display = "none"
+            btn.style.display = "block"
+        }
+    </script>
+</body>

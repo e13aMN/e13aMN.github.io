@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хайч,чулуу,даавуу</title>
+    <style>
+        body{
+            background-color: gray;
+            text-align: center;
+        }
+        button{
+            border-radius: 10px;
+            width: 200px;
+            height: 50px;
+        }
+        .tomdiv{
+            margin: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="tomdiv">
+        <button onclick="myFunction()">Хайч</button>
+        <button onclick="secondFunction()">Чулуу</button>
+        <button onclick="thirdFunction()">Даавуу</button>
+        <div class="backDiv" id="myId">
+            <h2 id="id1">CPU:0</h2>
+            <h2 id="id2">CPU:0</h2>
+            <h2 id="id3">YOU:0</h2>
+            <h2 id="id4">DRAW:0</h2>
+        </div>
+    </div>
+    <script>
+        var x = 1;
+        var y = 1;
+        var z = 1;
+        var count = 0;
+        var tools = ["Чулуу","Хайч","Даавуу"]
+        var myId2 = document.getElementById("id2");
+        var myId3 = document.getElementById("id3");
+        var myId4 = document.getElementById("id4");
+    function myFunction(){
+            if (count == 0){
+                document.getElementById("id1").innerHTML = "CPU: " + "Чулуу"  + " "+ "YOU:" +" "+ "Хайч" +" "+ "CPU:" + " " + "яллаа!"
+                myId2.innerHTML = "CPU:" + x++
+            }
+            else if(count == 1){
+                document.getElementById("id1").innerHTML =  "CPU: " + "Даавуу" +" "+ "YOU:" + "Хайч" + " "+ " " + "YOU" + " " + "яллаа!"
+                myId3.innerHTML = "YOU:" + y++
+            }
+            else if(count == 2){
+                document.getElementById("id1").innerHTML = "CPU: " + "Чулуу"  + " "+ "YOU:" +" "+ "Хайч" +" "+ "CPU:" + " " + "яллаа!"
+                myId2.innerHTML = "CPU:" + x++
+            }
+            else if(count == 3){
+                document.getElementById("id1").innerHTML = "CPU: " + "Чулуу"  + " "+ "YOU:" +" "+ "Хайч" +" "+ "CPU:" + " " + "яллаа!"
+                myId2.innerHTML = "CPU:" + x++
+            }
+            else{
+                document.getElementById("id1").innerHTML =  "CPU: " + "Хайч" +" "+ "YOU:" + "Хайч" + " "+ " " + "YOU" + " " + "тэнцлээ!"
+                myId4.innerHTML = "DRAW:" + z++
+                count = -1
+            }
+            count++
+        }
+    function secondFunction(){
+        if (count == 0){
+                document.getElementById("id1").innerHTML = "CPU: " + "Даавуу"  + " "+ "YOU:" +" "+ "Чулуу" +" "+ "CPU:" + " " + "яллаа!"
+                myId2.innerHTML = "CPU:" + x++
+            }
+            else if(count == 1){
+                document.getElementById("id1").innerHTML =  "CPU: " + "Хайч" +" "+ "YOU:" + " " + "Чулуу"+ " " + "YOU" + " " + "яллаа!"
+                myId3.innerHTML = "YOU:" + y++
+            }
+            else if(count == 2){
+                document.getElementById("id1").innerHTML = "CPU: " + "Даавуу"  + " "+ "YOU:" +" "+ "Чулуу" +" "+ "CPU:" + " " + "яллаа!"
+                myId2.innerHTML = "CPU:" + x++
+            }
+            else if(count == 3){
+                document.getElementById("id1").innerHTML = "CPU: " + "Даавуу"  + " "+ "YOU:" +" "+ "Чулуу" +" "+ "CPU:" + " " + "яллаа!"
+                myId2.innerHTML = "CPU:" + x++
+            }
+            else{
+                document.getElementById("id1").innerHTML =  "CPU: " + "Чулуу" +" "+ "YOU:" + " " + "Чулуу"+ " " + "YOU" + " " + "тэнцлээ!"
+                myId4.innerHTML = "DRAW:" + z++
+                count = -1
+            }
+            count++
+        }
+        function thirdFunction(){
+        if (count == 0){
+                document.getElementById("id1").innerHTML = "CPU: " + "Хайч"  + " "+ "YOU:" +" "+ "Даавуу" +" "+ "CPU:" + " " + "яллаа!"
+                myId2.innerHTML = "CPU:" + x++
+            }
+            else if(count == 1){
+                document.getElementById("id1").innerHTML =  "CPU: " + "Чулуу" +" "+ "YOU:" + " " + "Даавуу"+ " " + "YOU" + " " + "яллаа!"
+                myId3.innerHTML = "YOU:" + y++
+            }
+            else if(count == 2){
+                document.getElementById("id1").innerHTML =  "CPU: " + "Чулуу" +" "+ "YOU:" + " " + "Даавуу"+ " " + "YOU" + " " + "яллаа!"
+                myId3.innerHTML = "YOU:" + y++
+            }
+            else if(count == 3){
+                document.getElementById("id1").innerHTML =  "CPU: " + "Чулуу" +" "+ "YOU:" + " " + "Даавуу"+ " " + "YOU" + " " + "яллаа!"
+                myId3.innerHTML = "YOU:" + y++
+            }
+            else{
+                document.getElementById("id1").innerHTML =  "CPU: " + "Даавуу" +" "+ "YOU:" + " " + "Даавуу"+ " " + "YOU" + " " + "тэнцлээ!"
+                myId4.innerHTML = "DRAW:" + z++
+                count = -1
+            }
+            count++
+        }
+    </script>
+</body>
