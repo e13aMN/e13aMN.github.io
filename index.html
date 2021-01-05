@@ -6,6 +6,7 @@
 body {
   font-family: "Lato", sans-serif;
   background-color: grey;
+  background-image: url(https://i.pinimg.com/originals/37/51/43/3751436cde16d45b96ebf55737b498fe.jpg);
 }
 
 .sidenav {
@@ -46,6 +47,54 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 34px;
+}
+
+.navbar a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: ;
+  color: white;
+}
+
+.main {
+  padding: 16px;
+  margin-bottom: 30px;
+}
+span{
+  color: white;
+}
+.right{
+  float: right;
+  font-size: 16px;
+  color: white;
+  font-family: Apple Chancery, cursive;
+}
 </style>
 </head>
 <body>
@@ -65,7 +114,15 @@ body {
   <a href="Works/11.gifsearch.html">11.Gifsearch</a>
   <a href="Works/12.calculator.html">12.Calculator</a>
 </div>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Projects</span>
+<div class="navbar">
+  <a href="https://www.facebook.com/parkour.eba/">Facebook</a>
+  <a href="https://www.instagram.com/e13amn/">Instagram</a>
+  <div class="right">
+    <p>Утас: 99578338</p>
+    <p>e-mail: mr_eba_eba@yahoo.com</p>
+  </div>
+</div>
+<span style="font-size:40px;cursor:pointer" onclick="openNav()">&#9776; Projects</span>
 
   <script>
     function openNav() {
